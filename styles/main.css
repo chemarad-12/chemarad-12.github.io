@@ -3,14 +3,15 @@ html {
     scroll-padding-top: 70px;
 }
 
-body{
-    background-color: black;
-    font-family: "Victor Mono";
+body {
+    background-color: #121212; /* تیره‌تر */
+    font-family: "Victor Mono", monospace;
     margin: 0;
+    color: #ffffff;
 }
 
 .header {
-    background-color: #148E5C;
+    background-color: #1abe79;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -20,171 +21,174 @@ body{
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.home {
-    background-color: #148E5C;
-    margin-top: 70px;
+.name-main {
     display: flex;
-    padding: 70px;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 180px;
+}
+
+.name-main a {
+    color: #e0e0e0;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+
+.home {
+    background-color: #1abe79;
+    margin-top: 80px;
+    display: flex;
+    padding: 80px 20px;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .text-home {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     z-index: 2;
-}
-
-.start-home-h {
-    font-size: 2.5rem;
-    color: black;
-    font-weight: bold;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px;
 }
 
+.start-home-h,
 .start-home-w {
     font-size: 2.5rem;
-    color: black;
+    color: #121212;
     font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    display: inline-block;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .main-text-home {
-    font-size: 20px;
-    display: flex;
-    text-align: center;
-    color: black;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .skills {
-    background-color: #148E5C;
-    margin-top: 10px;
+    background-color: #1abe79;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 60px 20px;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .box-skills-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 30px;
-    row-gap: 10px;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
     width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
 }
 
 .box-skills {
-    height: 70px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    border: solid 3px black;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.box-skills:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.title-skills {
-    font-size: 20px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border-radius: 12px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.box-skills:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #00c177;
+    color: #000; /* متن مشکی */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4); /* سه‌بعدی شدن متن */
+    box-shadow: 0 8px 20px rgba(0, 193, 119, 0.5);
+    transition: all 0.3s ease;
+}
+
+.title-skills {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .contact {
-    background-color: #148E5C;
-    margin-top: 10px;
-    padding: 70px;
+    background-color: #1abe79;
+    margin-top: 20px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .contact-buttons-container {
     display: flex;
-    flex-direction: row;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-top: 30px;
 }
 
 .contact_button {
-    background-color: #00C177;
-    color: white;
+    background-color: #00c177;
+    color: #ffffff;
     border: none;
-    padding: 11px 14px;
-    font-weight: bold;
-    font-size: 15px;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 1rem;
     border-radius: 35px;
     cursor: pointer;
     transition: all 0.3s ease;
+<<<<<<< HEAD
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+=======
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     display: inline-block;
     text-align: center;
+>>>>>>> 4b44868586b554b0569a5de8dffa3cea9a20d017
 }
 
 .contact_button:hover {
-    background-color: #00a066;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.p_main{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.text_main{
-    font-size: 50px;
+    background-color: #2c2c2c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .contact-label,
 .skills-label {
-    font-size: 2.5rem;
-    margin: 0;
-    color: black;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #121212;
     font-weight: bold;
     text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
     position: relative;
-    display: inline-block;
 }
 
 .contact-label::after,
@@ -194,8 +198,9 @@ body{
     width: 0;
     height: 3px;
     bottom: -5px;
-    left: 0;
-    background-color: #00C177;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00c177;
     transition: width 0.3s ease;
 }
 
