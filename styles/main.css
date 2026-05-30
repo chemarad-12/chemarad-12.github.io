@@ -25,37 +25,6 @@ body {
     animation: bgMove 20s ease-in-out infinite alternate;
 }
 
-
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: 
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.18) 0 2px, transparent 2px 50px),
-        repeating-linear-gradient(-45deg, rgba(255,255,255,0.18) 0 2px, transparent 2px 50px);
-    background-size: 200% 200%;
-    opacity: 0.35;
-    z-index: -2;
-    pointer-events: none;
-    animation: particles 30s linear infinite alternate;
-}
-
-@keyframes bgMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes particles {
-    0% {
-        background-position: 0 0, 0 0;
-    }
-    100% {
-        background-position: 585px 585px, -585px -585px;
-    }
-}
-
 .container {
     display: flex;
     flex-direction: column;
