@@ -15,14 +15,20 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
-    background: linear-gradient(120deg, #0f2027 0%, #2c5364 40%, #00c177 100%);
-    background-size: 200% 200%;
+    background: linear-gradient(120deg, 
+        #05101a 0%,
+        #0f253b 25%,
+        #1a3b5c 40%,
+        #3b82a8 65%,
+        #00c177 100%
+    );
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
     height: 100vh;
-    animation: bgMove 20s ease-in-out infinite alternate;
+    animation: bgMove 40s ease-in-out infinite alternate;
 }
 
 .container {
